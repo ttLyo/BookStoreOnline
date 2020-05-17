@@ -32,7 +32,7 @@ class AllProducts extends React.Component{
         // console.log(AllProductsJson);
         return(
             <div className="allProducts">
-                 <ProductLists onSubmitData={this.addProduct.bind(this)} />
+                 <ProductLists products={this.props.products} onSubmitData={this.addProduct.bind(this)} />
             </div>
         )
     }

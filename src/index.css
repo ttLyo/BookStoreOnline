@@ -1,3 +1,4 @@
+@import '~antd/dist/antd.css';
 body {
   margin: 0;
   padding: 0;
@@ -16,7 +17,9 @@ a{
 ul li{
   list-style: none;
 }
-
+.selectLi{
+  border: 1px solid orange;
+}
 .topInfo{
   width:100%;
   height:5vh;
@@ -24,7 +27,15 @@ ul li{
   line-height:5vh;
   padding-left:20px;
 }
-
+.btn_show_login{
+  float:right;
+  margin: 4px 20px 0 0;
+}
+.reqTips{
+  color:red;
+  font-size:0.8em;
+  margin-top: -10px;
+}
 .left_nav{
     border:1px solid #eee;
 }
@@ -34,10 +45,13 @@ ul li{
   background-color:#efefef;
   position:relative;
 }
-
+.bought_title,.cart_title{
+  border-bottom: 1px solid #e8e1e1;
+}
 .showComp{
   width:99%;
   height:98%;
+  overflow-y: scroll;
   background-color: #FFF;
   box-shadow: -5px -3px 10px #d4d4d4;
   position:absolute;

@@ -1,0 +1,31 @@
+#box{
+    padding: 10px;
+}
+.btn_group{
+    margin: 5px 20px;
+}
+.btn_group button{
+    margin: 0px 5px;
+}
+.addForm input{
+    width: 70%;
+}
+.addForm label{
+    width: 30%;
+    text-align: center;
+    font-weight: bold;
+}
+.addForm_long label{
+    width: 14%;
+    text-align: center;
+    font-weight: bold;
+}
+.addForm_long input{
+    width: 80%;
+}
+.inputNumber{
+    width: 70%;
+}
+.upload{
+    /* padding: ; */
+}

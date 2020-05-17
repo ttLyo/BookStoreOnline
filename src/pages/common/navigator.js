@@ -6,20 +6,35 @@ import { Link,withRouter } from 'react-router-dom'
 // import navCont from './navCont'
 
  class Nav extends React.Component{
+    //  constructor(props){
+    //      super(props)
+    //  }
+    get_class_name(){
+        return this.props.history.location.pathname
+    }
     render(){
-        // console.log(this.props.history.location.pathname);
-        // console.log(this.state.navContArr);
         return(
             <ul className="nav nav-pills">
             {/*循环导航栏
                 *不可以嵌套Router标签   
             */}            
-                <li className={this.props.history.location.pathname === '/' ? 'active' : ''} role="presentation">
-                    <Link className="liBtn" to='/'>所有产品</Link>
+                <li className={this.get_class_name() === '/' ? 'active' : ''} role="presentation">
+                    <Link className="liBtn" to='/'>所有图书</Link>
                 </li>
-               <li className={this.props.history.location.pathname === '/myProducts' ? 'active' : ''} role="presentation">
-                    <Link className="liBtn" to='/myProducts'>我的产品</Link>
-                </li>
+                {this.props.loged&&
+                <li className={this.get_class_name() === '/myProducts' ? 'active' : ''} role="presentation">
+                    <Link className="liBtn" to='/myProducts'>我的订单</Link>
+                </li>}
+                {this.props.userType===1&&
+                    <li className={this.get_class_name() === '/productsManage' ? 'active' : ''} role="presentation">
+                        <Link className="liBtn" to='/productsManage'>书籍管理</Link>
+                    </li>
+                }
+                {this.props.userType===1&&
+                    <li className={this.get_class_name() === '/orderManage' ? 'active' : ''} role="presentation">
+                        <Link className="liBtn" to='orderManage'>订单管理</Link>
+                    </li>
+                }
             </ul>
         )
     }

@@ -1,12 +1,29 @@
 
-.modal-body{
+/* .modal-body{
     background-color: #fbf4f6;
     position: relative;
     height:340px;
     text-align: center;
+} */
+
+.modal_body{
+    display: grid;
+    grid-template-columns: 33.33% 66.66%;
+    background-color: #fbf4f6;
+    position: relative;
+    height:340px;
+    /* text-align: center; */
+    /* grid-template-rows: 33.33% 33.33% 33.33%; */
 }
-
-
+.login_modal_head{
+    margin:auto;
+}
+.login_modal_body{
+    padding: 1.5rem 3rem;
+}
+.modal_content{
+    width: 80%;
+}
 .productCont{
     box-shadow: 2px 2px 2px -3px #d8d8d8;
     left:0;
